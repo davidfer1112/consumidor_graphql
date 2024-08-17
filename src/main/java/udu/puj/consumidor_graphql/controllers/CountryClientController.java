@@ -20,7 +20,7 @@ public class CountryClientController {
     @GetMapping(value = "/byCode", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getCountryByCode() {
         try {
-            CountryDto response = countryService.getCountryDetails("US");
+            CountryDto response = countryService.getCountryDetails("CO");
             return ResponseEntity.ok(response.getData().getCountry());
         } catch (Exception e) {
             e.printStackTrace();
